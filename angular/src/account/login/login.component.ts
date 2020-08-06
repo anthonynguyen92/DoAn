@@ -1,9 +1,10 @@
 import { Component, Injector } from '@angular/core';
 import { AbpSessionService } from 'abp-ng2-module';
-import { AppComponentBase } from '@shared/app-component-base';
-import { accountModuleAnimation } from '@shared/animations/routerTransition';
-import { AppAuthService } from '@shared/auth/app-auth.service';
+import { AppComponentBase } from '../../app/shared/app-component-base';
+import { accountModuleAnimation } from '../../app/shared/animations/routerTransition';
+import { AppAuthService } from '../../app/shared/auth/app-auth.service';
 
+import { from } from 'rxjs';
 @Component({
   templateUrl: './login.component.html',
   animations: [accountModuleAnimation()]

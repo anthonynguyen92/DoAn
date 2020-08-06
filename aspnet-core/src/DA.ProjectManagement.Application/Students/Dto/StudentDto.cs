@@ -1,8 +1,10 @@
 ﻿using Abp.Application.Services.Dto;
+using Abp.AutoMapper;
 using System;
 
 namespace DA.ProjectManagement.Students.Dto
 {
+    [AutoMapFrom(typeof(Student))]
     public class StudentDto : EntityDto<Guid>
     {
         public string Name { get; set; }
@@ -13,6 +15,6 @@ namespace DA.ProjectManagement.Students.Dto
         public string Faculty { get; set; }
         public string Branch { get; set; }
         public string CourseYear { get; set; }
-        public string StundentCode { get; set; }
+        public string StudentCode { get; set; }
     }
 }

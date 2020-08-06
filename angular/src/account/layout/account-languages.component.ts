@@ -4,7 +4,7 @@ import {
   Injector,
   ChangeDetectionStrategy
 } from '@angular/core';
-import { AppComponentBase } from '@shared/app-component-base';
+import { AppComponentBase } from '../../app/shared/app-component-base';
 import * as _ from 'lodash';
 
 @Component({

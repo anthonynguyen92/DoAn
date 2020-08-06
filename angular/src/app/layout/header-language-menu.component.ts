@@ -4,11 +4,11 @@ import {
   OnInit,
   Injector
 } from '@angular/core';
-import { AppComponentBase } from '@shared/app-component-base';
+import { AppComponentBase } from '../shared/app-component-base';
 import {
   UserServiceProxy,
   ChangeUserLanguageDto
-} from '@shared/service-proxies/service-proxies';
+} from '../shared/service-proxies/service-proxies';
 import * as _ from 'lodash';
 
 @Component({

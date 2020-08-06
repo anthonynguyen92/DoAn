@@ -1,13 +1,13 @@
 import { Component, Injector } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { AppComponentBase } from '@shared/app-component-base';
-import { AccountServiceProxy } from '@shared/service-proxies/service-proxies';
-import { AppTenantAvailabilityState } from '@shared/AppEnums';
+import { AppComponentBase } from '../../app/shared/app-component-base';
+import { AccountServiceProxy } from '../../app/shared/service-proxies/service-proxies';
+import { AppTenantAvailabilityState } from '../../app/shared/AppEnums';
 import {
   IsTenantAvailableInput,
   IsTenantAvailableOutput
-} from '@shared/service-proxies/service-proxies';
+} from '../../app/shared/service-proxies/service-proxies';
 
 @Component({
   templateUrl: './tenant-change-dialog.component.html'

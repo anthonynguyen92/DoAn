@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { LayoutStoreService } from '@shared/layout/layout-store.service';
+import { LayoutStoreService } from '../shared/layout/layout-store.service';
 
 @Component({
   selector: 'header-left-navbar',

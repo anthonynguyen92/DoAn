@@ -2,7 +2,7 @@
 
 namespace DA.ProjectManagement.Students.Dto
 {
-    public class PagedStudentRequestDto : PagedResultRequestDto
+    public class PagedStudentRequestDto : PagedAndSortedResultRequestDto
     {
         public string Keyword { get; set; }
         //public bool? IsActive { get; set; }

@@ -4,7 +4,7 @@ import {
   Renderer2,
   OnInit
 } from '@angular/core';
-import { LayoutStoreService } from '@shared/layout/layout-store.service';
+import { LayoutStoreService } from '../shared/layout/layout-store.service';
 
 @Component({
   // tslint:disable-next-line:component-selector

@@ -8,7 +8,7 @@ import {
 import { finalize } from 'rxjs/operators';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import * as _ from 'lodash';
-import { AppComponentBase } from '@shared/app-component-base';
+import { AppComponentBase } from '../../shared/app-component-base';
 import {
   RoleServiceProxy,
   GetRoleForEditOutput,
@@ -16,7 +16,8 @@ import {
   PermissionDto,
   RoleEditDto,
   FlatPermissionDto
-} from '@shared/service-proxies/service-proxies';
+} from '../../shared/service-proxies/service-proxies';
+import { from } from 'rxjs';
 
 @Component({
   templateUrl: 'edit-role-dialog.component.html'

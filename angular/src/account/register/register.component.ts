@@ -1,14 +1,14 @@
 import { Component, Injector } from '@angular/core';
 import { Router } from '@angular/router';
 import { finalize } from 'rxjs/operators';
-import { AppComponentBase } from '@shared/app-component-base';
+import { AppComponentBase } from '../../app/shared/app-component-base';
 import {
   AccountServiceProxy,
   RegisterInput,
   RegisterOutput
-} from '@shared/service-proxies/service-proxies';
-import { accountModuleAnimation } from '@shared/animations/routerTransition';
-import { AppAuthService } from '@shared/auth/app-auth.service';
+} from '../../app/shared/service-proxies/service-proxies';
+import { accountModuleAnimation } from '../../app/shared/animations/routerTransition';
+import { AppAuthService } from '../../app/shared/auth/app-auth.service';
 
 @Component({
   templateUrl: './register.component.html',

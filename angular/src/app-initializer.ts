@@ -3,8 +3,8 @@ import { PlatformLocation, registerLocaleData } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
 import * as _ from 'lodash';
-import { AppConsts } from '@shared/AppConsts';
-import { AppSessionService } from '@shared/session/app-session.service';
+import { AppConsts } from './app/shared/AppConsts';
+import { AppSessionService } from './app/shared/session/app-session.service';
 import { environment } from './environments/environment';
 
 @Injectable({

@@ -1,16 +1,16 @@
 import { Component, Injector } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { appModuleAnimation } from '@shared/animations/routerTransition';
+import { appModuleAnimation } from '../shared/animations/routerTransition';
 import {
   PagedListingComponentBase,
   PagedRequestDto,
-} from '@shared/paged-listing-component-base';
+} from '../shared/paged-listing-component-base';
 import {
   TenantServiceProxy,
   TenantDto,
   TenantDtoPagedResultDto,
-} from '@shared/service-proxies/service-proxies';
+} from '../shared/service-proxies/service-proxies';
 import { CreateTenantDialogComponent } from './create-tenant/create-tenant-dialog.component';
 import { EditTenantDialogComponent } from './edit-tenant/edit-tenant-dialog.component';
 

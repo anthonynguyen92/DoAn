@@ -119,6 +119,8 @@ namespace DA.ProjectManagement.Web.Host.Startup
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
+            app.UseHttpsRedirection();
+
             app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
 
             app.UseCors(_defaultCorsPolicyName); // Enable CORS!
@@ -126,8 +128,6 @@ namespace DA.ProjectManagement.Web.Host.Startup
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseHttpsRedirection();
 
             app.UseAuthentication();
 
