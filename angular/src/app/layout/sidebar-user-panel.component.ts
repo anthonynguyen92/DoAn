@@ -4,7 +4,7 @@ import {
   Injector,
   OnInit
 } from '@angular/core';
-import { AppComponentBase } from '@shared/app-component-base';
+import { AppComponentBase } from '../shared/app-component-base';
 
 @Component({
   selector: 'sidebar-user-panel',

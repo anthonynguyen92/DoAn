@@ -7,11 +7,11 @@ import {
 } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { AppComponentBase } from '@shared/app-component-base';
+import { AppComponentBase } from '../../shared/app-component-base';
 import {
   TenantServiceProxy,
   TenantDto
-} from '@shared/service-proxies/service-proxies';
+} from '../../shared/service-proxies/service-proxies';
 
 @Component({
   templateUrl: 'edit-tenant-dialog.component.html'

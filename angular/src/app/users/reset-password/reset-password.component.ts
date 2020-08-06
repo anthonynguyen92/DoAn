@@ -1,10 +1,10 @@
 import { Component, OnInit, Injector } from '@angular/core';
-import { AppComponentBase } from '@shared/app-component-base';
+import { AppComponentBase } from '../../shared/app-component-base';
 import { finalize } from 'rxjs/operators';
 import {
   UserServiceProxy,
   ResetPasswordDto
-} from '@shared/service-proxies/service-proxies';
+} from '../../shared/service-proxies/service-proxies';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({

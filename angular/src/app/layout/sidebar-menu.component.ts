@@ -1,5 +1,5 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { AppComponentBase } from '@shared/app-component-base';
+import { AppComponentBase } from '../shared/app-component-base';
 import {
   Router,
   RouterEvent,
@@ -8,7 +8,7 @@ import {
 } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { MenuItem } from '@shared/layout/menu-item';
+import { MenuItem } from '../shared/layout/menu-item';
 
 @Component({
   selector: 'sidebar-menu',
@@ -44,25 +44,11 @@ export class SidebarMenuComponent extends AppComponentBase implements OnInit {
   getMenuItems(): MenuItem[] {
     return [
       new MenuItem(this.l('HomePage'), '/app/home', 'fas fa-home'),
-      new MenuItem(
-        this.l('Tenants'),
-        '/app/tenants',
-        'fas fa-building',
-        'Pages.Tenants'
-      ),
-      new MenuItem(
-        this.l('Users'),
-        '/app/users',
-        'fas fa-users',
-        'Pages.Users'
-      ),
-      new MenuItem(
-        this.l('Roles'),
-        '/app/roles',
-        'fas fa-theater-masks',
-        'Pages.Roles'
-      ),
-      new MenuItem(this.l('About'), '/app/about', 'fas fa-info-circle'),
+      new MenuItem(this.l('Users'), '/app/users', 'fas fa-users', 'Pages.Users'),
+      new MenuItem(this.l('Roles'), '/app/roles', 'fas fa-theater-masks', 'Pages.Roles'),
+      new MenuItem(this.l('Student'),'/app/student','fas fa-user-alt',''),
+      new MenuItem(this.l('Teacher'),'/app/teacher','fas fa-chalkboard-teacher',''),
+      
     ];
   }
 

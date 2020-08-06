@@ -1,16 +1,16 @@
 import { Component, Injector } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { appModuleAnimation } from '@shared/animations/routerTransition';
+import { appModuleAnimation } from '../shared/animations/routerTransition';
 import {
   PagedListingComponentBase,
   PagedRequestDto
-} from '@shared/paged-listing-component-base';
+} from '../shared/paged-listing-component-base';
 import {
   RoleServiceProxy,
   RoleDto,
   RoleDtoPagedResultDto
-} from '@shared/service-proxies/service-proxies';
+} from '../shared/service-proxies/service-proxies';
 import { CreateRoleDialogComponent } from './create-role/create-role-dialog.component';
 import { EditRoleDialogComponent } from './edit-role/edit-role-dialog.component';
 
@@ -68,7 +68,7 @@ export class RolesComponent extends PagedListingComponentBase<RoleDto> {
                 this.refresh();
               })
             )
-            .subscribe(() => {});
+            .subscribe(() => { });
         }
       }
     );

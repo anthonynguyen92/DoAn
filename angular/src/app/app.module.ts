@@ -10,8 +10,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServiceProxyModule } from '@shared/service-proxies/service-proxy.module';
-import { SharedModule } from '@shared/shared.module';
+import { ServiceProxyModule } from './shared/service-proxies/service-proxy.module';
+import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from '@app/home/home.component';
 // tenants
 import { TenantsComponent } from '@app/tenants/tenants.component';
@@ -96,4 +96,4 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
     ResetPasswordDialogComponent,
   ],
 })
-export class AppModule {}
+export class AppModule { }

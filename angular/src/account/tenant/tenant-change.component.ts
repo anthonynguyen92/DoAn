@@ -1,5 +1,5 @@
 ﻿import { Component, OnInit, Injector } from '@angular/core';
-import { AppComponentBase } from '@shared/app-component-base';
+import { AppComponentBase } from '../../app/shared/app-component-base';
 import { TenantChangeDialogComponent } from './tenant-change-dialog.component';
 import { BsModalService } from 'ngx-bootstrap/modal';
 

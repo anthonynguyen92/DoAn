@@ -1626,7 +1626,7 @@ namespace DA.ProjectManagement.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StundentCode")
+                    b.Property<string>("StudentCode")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
