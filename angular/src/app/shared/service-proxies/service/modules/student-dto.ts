@@ -1,4 +1,4 @@
-export class StudentDto {
+export class StudentDto implements IStudentDto {
 
     name: string | undefined;
     birthday: Date | undefined;
@@ -9,7 +9,7 @@ export class StudentDto {
     studentCode: string;
     faculty: string | undefined;
     branch: string | undefined;
-    id: number;
+    id: string;
 
     constructor(data?: IStudentDto) {
         if (data) {
@@ -29,7 +29,7 @@ export class StudentDto {
             this.address = data["address"];
             this.courseYear = data["courseYear"];
             this.studentCode = data["studentCode"];
-            this.faculty = data["faculty"];
+            this.faculty = data["facutly"];
             this.branch = data["branch"];
             this.id = data["id"];
         }
@@ -44,15 +44,15 @@ export class StudentDto {
 
     toJSON(data?: any) {
         data = typeof data === 'object' ? data : {};
-        data["name"]= this.name;
-        data["birthday"]= this.birthday;
+        data["name"] = this.name;
+        data["birthday"] = this.birthday;
         data["phoneNumber"] = this.phoneNumber;
-        data["email"]= this.email;
-        data["address"]= this.address;
-        data["courseYear"]= this.courseYear;
-        data["StudentCode"]= this.studentCode;
-        data["faculty"]= this.faculty;
-        data["branch"]= this.branch;
+        data["email"] = this.email;
+        data["address"] = this.address;
+        data["courseYear"] = this.courseYear;
+        data["StudentCode"] = this.studentCode;
+        data["faculty"] = this.faculty;
+        data["branch"] = this.branch;
         data["id"] = this.id;
         return data;
     }
@@ -65,6 +65,15 @@ export class StudentDto {
     }
 }
 
-export interface IStudentDto{
-    
+export interface IStudentDto {
+    name: string | undefined;
+    birthday: Date | undefined;
+    phoneNumber: string | undefined;
+    email: string | undefined;
+    address: string;
+    courseYear: string;
+    studentCode: string;
+    faculty: string | undefined;
+    branch: string | undefined;
+    id: string;
 }

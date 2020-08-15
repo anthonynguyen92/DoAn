@@ -17,13 +17,35 @@ import { LayoutStoreService } from './layout/layout-store.service';
 
 import { BusyDirective } from './directives/busy.directive';
 import { EqualValidator } from './directives/equal-validator.directive';
-import { from } from 'rxjs';
+import { DatepickerComponent } from './components/datetime-picker/datepicker.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from '@app/layout/header.component';
+import { HeaderLeftNavbarComponent } from '@app/layout/header-left-navbar.component';
+import { HeaderLanguageMenuComponent } from '@app/layout/header-language-menu.component';
+import { HeaderUserMenuComponent } from '@app/layout/header-user-menu.component';
+import { FooterComponent } from '@app/layout/footer.component';
+import { SidebarComponent } from '@app/layout/sidebar.component';
+import { SidebarLogoComponent } from '@app/layout/sidebar-logo.component';
+import { SidebarUserPanelComponent } from '@app/layout/sidebar-user-panel.component';
+import { SidebarMenuComponent } from '@app/layout/sidebar-menu.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
     imports: [
         CommonModule,
         RouterModule,
-        NgxPaginationModule
+        NgxPaginationModule,
+        //angular material
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatNativeDateModule,
+
+        FormsModule,
+        ReactiveFormsModule,
     ],
     declarations: [
         AbpPaginationControlsComponent,
@@ -32,7 +54,18 @@ import { from } from 'rxjs';
         AbpModalFooterComponent,
         LocalizePipe,
         BusyDirective,
-        EqualValidator
+        EqualValidator,
+        //layout
+        HeaderComponent,
+        HeaderLeftNavbarComponent,
+        HeaderLanguageMenuComponent,
+        HeaderUserMenuComponent,
+        FooterComponent,
+        SidebarComponent,
+        SidebarLogoComponent,
+        SidebarUserPanelComponent,
+        SidebarMenuComponent,
+        DatepickerComponent
     ],
     exports: [
         AbpPaginationControlsComponent,
@@ -41,7 +74,27 @@ import { from } from 'rxjs';
         AbpModalFooterComponent,
         LocalizePipe,
         BusyDirective,
-        EqualValidator
+        EqualValidator,
+        //layout
+        HeaderComponent,
+        HeaderLeftNavbarComponent,
+        HeaderLanguageMenuComponent,
+        HeaderUserMenuComponent,
+        FooterComponent,
+        SidebarComponent,
+        SidebarLogoComponent,
+        SidebarUserPanelComponent,
+        SidebarMenuComponent,
+        // angular material
+
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatNativeDateModule,
+        MatInputModule,
+        MatNativeDateModule,
+
+        //component
+        DatepickerComponent,
     ]
 })
 export class SharedModule {

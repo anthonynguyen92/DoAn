@@ -27,6 +27,8 @@ import { CreateUserDialogComponent } from '@app/users/create-user/create-user-di
 import { EditUserDialogComponent } from '@app/users/edit-user/edit-user-dialog.component';
 import { ChangePasswordComponent } from './users/change-password/change-password.component';
 import { ResetPasswordDialogComponent } from './users/reset-password/reset-password.component';
+// student
+
 // layout
 import { HeaderComponent } from './layout/header.component';
 import { HeaderLeftNavbarComponent } from './layout/header-left-navbar.component';
@@ -37,6 +39,9 @@ import { SidebarComponent } from './layout/sidebar.component';
 import { SidebarLogoComponent } from './layout/sidebar-logo.component';
 import { SidebarUserPanelComponent } from './layout/sidebar-user-panel.component';
 import { SidebarMenuComponent } from './layout/sidebar-menu.component';
+import { EditStudentDialogComponent } from './student/edit/edit-student.component';
+import { CreateStudentDialogComponent } from './student/create/create-student.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
@@ -56,16 +61,10 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
     EditUserDialogComponent,
     ChangePasswordComponent,
     ResetPasswordDialogComponent,
-    // layout
-    HeaderComponent,
-    HeaderLeftNavbarComponent,
-    HeaderLanguageMenuComponent,
-    HeaderUserMenuComponent,
-    FooterComponent,
-    SidebarComponent,
-    SidebarLogoComponent,
-    SidebarUserPanelComponent,
-    SidebarMenuComponent
+    // student
+    StudentComponent,
+    CreateStudentDialogComponent,
+    EditStudentDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -94,6 +93,10 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
     CreateUserDialogComponent,
     EditUserDialogComponent,
     ResetPasswordDialogComponent,
+    // student
+    StudentComponent,
+    CreateStudentDialogComponent,
+    EditStudentDialogComponent,
   ],
 })
 export class AppModule { }

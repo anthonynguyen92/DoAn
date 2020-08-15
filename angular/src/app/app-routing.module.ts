@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { RolesComponent } from 'app/roles/roles.component';
 // import { ChangePasswordComponent } from './users/change-password/change-password.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
     imports: [
@@ -31,6 +32,12 @@ import { RolesComponent } from 'app/roles/roles.component';
                         data: { permission: 'Pages.Roles' },
                         canActivate: [AppRouteGuard]
                     },
+                    {
+                        path: 'student',
+                        component: StudentComponent,
+                        //data: { },
+                        canActivate: [AppRouteGuard]
+                    }
                 ]
             }
         ])

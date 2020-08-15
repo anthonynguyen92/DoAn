@@ -21,15 +21,15 @@ namespace DA.ProjectManagement.Students
             _repository = repository;
         }
 
-        protected override string CreatePermissionName { get; set; } = StudentPermission.Create;
-        protected override string UpdatePermissionName { get; set; } = StudentPermission.Update;
-        protected override string DeletePermissionName { get; set; } = StudentPermission.Delete;
-        protected override string GetAllPermissionName { get; set; } = StudentPermission.Default;
+        //protected override string CreatePermissionName { get; set; } = StudentPermission.Create;
+        //protected override string UpdatePermissionName { get; set; } = StudentPermission.Update;
+        //protected override string DeletePermissionName { get; set; } = StudentPermission.Delete;
+        //protected override string GetAllPermissionName { get; set; } = StudentPermission.Default;
 
 
         protected override IQueryable<Student> CreateFilteredQuery(PagedStudentRequestDto input)
         {
-            return _repository.GetAll().WhereIf(string.IsNullOrWhiteSpace(input.Keyword), x => x.Name.Contains(input.Keyword)
+            return _repository.GetAll().WhereIf(!string.IsNullOrWhiteSpace(input.Keyword), x => x.Name.Contains(input.Keyword)
             || x.PhoneNumber.Contains(input.Keyword)
             || x.Address.Contains(input.Keyword)
             || x.Branch.Contains(input.Keyword)

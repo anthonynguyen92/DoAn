@@ -1,0 +1,128 @@
+<form class="form-horizontal" autocomplete="off" #createTenantForm="ngForm" (ngSubmit)="save()">
+    <abp-modal-header [title]="'CreateNewStudent' | localize" (onCloseClick)="this._bsModalRef.hide()">
+    </abp-modal-header>
+    <div class="modal-body">
+
+        <!-- name -->
+        <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="name">
+                {{ "StudentName" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="name" id="studentName" minlength="2" maxlength="100"
+                    required [(ngModel)]="student.name" #studentName="ngModel" #studentNameEl />
+                <abp-validation-summary [control]="studentName" [controlEl]="studentNameEl">
+                </abp-validation-summary>
+            </div>
+        </div>
+
+        <!-- birthday -->
+        <!-- <div class="form-group row required">
+            <mat-form-field class="w-100">
+                <mat-label>{{'StudentBirthday' | localize}}
+                </mat-label>
+                <input matInput [matDatepicker]="picker" [(ngModel)]="student.birthday" name="birthday" required>
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div> -->
+
+        <!-- Phone -->
+        <!-- <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="phoneNumber">
+                {{ "StudentPhone" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" minlength="2" maxlength="64"
+                    required [(ngModel)]="student.phoneNumber" #phoneNumberModel="ngModel" #phoneNumberModelEl />
+                <abp-validation-summary [control]="phoneNumberModel" [controlEl]="phoneNumberModelEl">
+                </abp-validation-summary>
+            </div>
+        </div> -->
+
+        <!-- Email -->
+        <!-- <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="email">
+                {{ "StudentEmail" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="email" id="email"
+                    pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$" required [(ngModel)]="student.email"
+                    #emailModel="ngModel" #emailEl />
+                <abp-validation-summary [control]="emailModel" [controlEl]="emailEl">
+                </abp-validation-summary>
+            </div>
+        </div> -->
+
+        <!-- Address -->
+        <!-- <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="Address">
+                {{ "StudentAddress" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="address" id="address" minlength="10" maxlength="100"
+                    [(ngModel)]="student.address" #addressModel="ngModel" #addressEl />
+                <abp-validation-summary [control]="addressModel" [controlEl]="addressEl">
+                </abp-validation-summary>
+            </div>
+        </div> -->
+
+        <!-- CourseYear -->
+        <!-- <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="CourseYear">
+                {{ "StudentCourseYear" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="courseYear" id="courseYear" minlength="1" maxlength="2"
+                    required [(ngModel)]="student.courseYear" #courseYearModel="ngModel" #courseYearEl />
+                <abp-validation-summary [control]="courseYearModel" [controlEl]="courseYearEl">
+                </abp-validation-summary>
+            </div>
+        </div> -->
+
+        <!-- StudentCode -->
+        <!-- <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="studentCode">
+                {{ "StudentCode" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="studentCode" id="studentCode" minlength="10"
+                    maxlength="10" required [(ngModel)]="student.studentCode" #studentCodeModel="ngModel"
+                    #studentCodeEl />
+                <abp-validation-summary [control]="studentCodeModel" [controlEl]="studentCodeEl">
+                </abp-validation-summary>
+            </div>
+        </div> -->
+
+        <!-- Facutly -->
+        <!-- <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="Facutly">
+                {{ "StudentFacutly" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="facutly" id="facutly" maxlength="100" minlength="10"
+                    required [(ngModel)]="student.faculty" #studentFacutlyModel="ngModel" #studentFacutlyEl />
+                <abp-validation-summary [control]="studentFacutlyModel" [controlEl]="studentFacutlyEl">
+                </abp-validation-summary>
+            </div>
+        </div> -->
+
+        <!-- branch -->
+        <!-- <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="studentBranch">
+                {{ "StudentBranch" | localize }}
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="studentBranch" id="StudentBrach" minlength="10"
+                    maxlength="10" required [(ngModel)]="student.branch" #studentCodeModel="ngModel"
+                    #studentCodeEl />
+                <abp-validation-summary [control]="studentCodeModel" [controlEl]="studentCodeEl">
+                </abp-validation-summary>
+            </div>
+        </div> -->
+
+    </div>
+    <abp-modal-footer [cancelDisabled]="saving" [saveDisabled]="!createTenantForm.form.valid || saving"
+        (onCancelClick)="this._bsModalRef.hide()"></abp-modal-footer>
+</form>

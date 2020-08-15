@@ -37,21 +37,11 @@ export class TenantsComponent extends PagedListingComponentBase<TenantDto> {
     super(injector);
   }
 
-  list(
-    request: PagedTenantsRequestDto,
-    pageNumber: number,
-    finishedCallback: Function
-  ): void {
+  list(request: PagedTenantsRequestDto, pageNumber: number, finishedCallback: Function): void {
     request.keyword = this.keyword;
     request.isActive = this.isActive;
 
-    this._tenantService
-      .getAll(
-        request.keyword,
-        request.isActive,
-        request.skipCount,
-        request.maxResultCount
-      )
+    this._tenantService.getAll(request.keyword, request.isActive, request.skipCount, request.maxResultCount)
       .pipe(
         finalize(() => {
           finishedCallback();
@@ -77,7 +67,7 @@ export class TenantsComponent extends PagedListingComponentBase<TenantDto> {
                 this.refresh();
               })
             )
-            .subscribe(() => {});
+            .subscribe(() => { });
         }
       }
     );
